@@ -4,7 +4,7 @@
       <div class="col">
         <img src="../assets/images/logo2.png" class="introimg" alt="">
         <h1 class="text-center mainTitle">
-          A/L infrastructures
+          AL infrastructures Development
         </h1>
       </div>
     </div>
@@ -42,11 +42,11 @@
   </div>
 </section>
 
-<section id="services">
+<section class="services" id="services">
   <h1 class="secTitle">Services</h1>
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- <div class="col">
         <div class="card text-center">
           <div class="iconbox">
             <div class="iconwrapper">
@@ -55,6 +55,48 @@
           </div>
           <div class="card-body">
             <h5 class="card-title">Wood Work</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div> -->
+      <div class="col">
+        <div class="card text-center">
+          <div class="iconbox">
+            <div class="iconwrapper">
+              <i class="fa-solid fa-chair"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Wood Craving</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <div class="iconbox">
+            <div class="iconwrapper">
+              <i class="fa-solid fa-chair"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Wood Furniture</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <div class="iconbox">
+            <div class="iconwrapper">
+              <i class="fa-solid fa-chair"></i>
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Interior Designing</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
               content. This content is a little bit longer.</p>
           </div>
@@ -106,40 +148,130 @@
   </div>
 </section>
 
-<!-- <section id="recentWorks">
-  <h1 class="secTitle">Our Recent Works</h1>
+<section id="recentWorks">
+  <h1 class="secTitle text-white">Our Recent Works</h1>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-2">
       <div class="col" *ngFor="let items of recentWorks">
-        <div class="card h-100 text-center">
+        <div class="card h-100 text-center cursorp" data-bs-toggle="modal"
+          attr.data-bs-target="#exampleModal{{ items.id }}">
           <img src="{{ items.src }}" height="350px" class="imgprop card-img-top" alt="">
         </div>
       </div>
     </div>
   </div>
-</section> -->
-<div class="container mt-5">
-  <div class="grid">
-    <div class="grid-sizer">
-      <img src="../assets/images/recw1.jpeg" alt="">
-    </div>
-    <div class="grid-item">
-      <img src="../assets/images/recw2.jpeg" alt="">
-    </div>
-    <div class="grid-item grid-item--width2 grid-item--height2">
-      <img src="../assets/images/recw3.jpeg" alt="">
-    </div>
-    <div class="grid-item grid-item--height3">
-      <img src="../assets/images/recw4.jpeg" alt="">
-    </div>
-    <div class="grid-item grid-item--height2">
-      <img src="../assets/images/recw5.jpeg" alt="">
-    </div>
-    <div class="grid-item grid-item--width3">
-      <img src="../assets/images/recw6.jpeg" alt="">
-    </div>
-    <div class="grid-item">
-      <img src="../assets/images/recw7.jpeg" alt="">
-    </div>
+</section>
+<!-- Modal -->
+<div class="wrap" *ngFor="let items of recentWorks">
+  <div class="modal fade" id="exampleModal{{ items.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div id="modalfun" [ngClass]="{'modal-dialog-centered':list}" class="modal-dialog">
+      <div class="ifcon" *ngIf="items.t else elseBlock">
+        <img src=" {{ items.src }}" width="100%" class="imgprop ifimg" height="100%" alt="">
+      </div>
 
+      <ng-template #elseBlock>
+        <div class="modal-content">
+          <img src=" {{ items.src }}" width="100%" height="100%" class="imgprop" alt="">
+        </div>
+      </ng-template>
+    </div>
+  </div>
 </div>
+<section id="contact">
+  <h1 class="secTitle text-dark">Contact</h1>
+  <div class="container">
+    <div class="row g-1 bshadow">
+      <div class="col-md-4">
+
+        <div class="row g-0">
+
+          <div class="card p-3 text-center">
+            <div class="col-md-12 p-3">
+              <div class="iconbox">
+                <div class="iconwrapper">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+              </div>
+              <p>
+                +91 80726 84418
+                <br />
+                +91 94427 44138
+              </p>
+            </div>
+
+            <div class="col-md-12 p-3">
+
+              <div class="iconbox">
+                <div class="iconwrapper">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+              </div>
+              <p>
+                No. 2/2 Pandi Ayya Kovil Street<br />
+                soodamani puram, Karaikudi-630002,<br /> Sivagangai Dist, Tamilnadu.
+              </p>
+
+            </div>
+            <div class="col-md-12 p-3">
+
+              <div class="iconbox">
+                <div class="iconwrapper">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+              </div>
+              <p>
+                karthiunjanai@gmail.com
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-8">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.2607996118822!2d78.7712156147123!3d10.077703992797895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00675dbfffffff%3A0x910acd04bef80762!2sRS%20Infosolution%20%7C%20IT%2FITES%20Company!5e0!3m2!1sen!2sin!4v1645089329688!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#292d33" fill-opacity="1"
+      d="M0,224L48,218.7C96,213,192,203,288,208C384,213,480,235,576,240C672,245,768,235,864,208C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    </path>
+  </svg>
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-md-4">
+          <img src="../assets/images/logo2.png" alt="">
+          <h2 class="pt-2 pb-3">AL Infrastructures Development</h2>
+          <p>
+            At A/L infrastructures, our promise is to execute the highest-quality trim carpentry work to commercial and
+            private jobs with a commitment to open, honest, two-way communication, respect, and empathy for our clients,
+            employees, and each other. The result is excellent work that exceeds expectations and leaves everyone
+            feeling good about a job well done.
+          </p>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quam, assumenda nemo corrupti impedit culpa
+          voluptatum.
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <ul>
+            <li>Home</li>
+            <li>services</li>
+            <li>recent Works</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</footer>
