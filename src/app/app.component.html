@@ -1,4 +1,30 @@
-<section class="landingPage">
+ <section id="navBar">
+  <nav id="nav" class="navbar fixed-top navbar-expand-lg navbar-light overflow-hidden">
+    <div class="container-fluid">
+      <a class="navbar-brand px-2" href="#">
+        <img src="../assets/images/logo2.png" alt="" width="80" height="40">
+      </a>
+      <button class="navbar-toggler" id="menu-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="text nav-link active" aria-current="page" (click)="scrollToTarget('.landingPage')">Home</a>
+          <a class="text nav-link" (click)="scrollToTarget('.about')">About Us</a>
+          <a class="text nav-link" (click)="scrollToTarget('.services')">Services</a>
+          <a class="text nav-link" (click)="scrollToTarget('.recentWorks')">Recent Works</a>
+          <a class="text nav-link" (click)="scrollToTarget('.contact')">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<!-- landingpage -->
+
+<section id="landingPage" class="landingPage"> -->
   <div class="container-fluid landpage">
     <div class="row">
       <div class="col">
@@ -10,7 +36,10 @@
     </div>
   </div>
 </section>
-<section class="about">
+
+<!-- about -->
+
+<section id="about" class="about">
   <img src="../assets/images/aboutimg.jpg" height="600px" width="100%" alt="">
   <div class="box">
     <div class="container-fluid">
@@ -19,7 +48,7 @@
           <div class="imgbox"></div>
           <h2 class="title">About Us</h2>
           <p id="lnpad" class="text-white">
-            At A/L infrastructures, our promise is to execute the highest-quality trim carpentry work to commercial and
+            At A/L Infrastructures, our promise is to execute the highest-quality trim carpentry work to commercial and
             private jobs with a commitment to open, honest, two-way communication, respect, and empathy for our clients,
             employees, and each other. The result is excellent work that exceeds expectations and leaves everyone
             feeling
@@ -40,26 +69,14 @@
       </div>
     </div>
   </div>
-</section>
+</section> 
+
+<!--services-->
 
 <section class="services" id="services">
   <h1 class="secTitle">Services</h1>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <!-- <div class="col">
-        <div class="card text-center">
-          <div class="iconbox">
-            <div class="iconwrapper">
-              <i class="fa-solid fa-chair"></i>
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Wood Work</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-          </div>
-        </div>
-      </div> -->
       <div class="col">
         <div class="card text-center">
           <div class="iconbox">
@@ -148,8 +165,11 @@
   </div>
 </section>
 
-<section id="recentWorks">
-  <h1 class="secTitle text-white">Our Recent Works</h1>
+
+<!-- recentWorks -->
+
+<section class="recentWorks" id="recentWorks">
+  <h1 class="secTitle py-4 pt-5 text-white">Our Recent Works</h1>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-3 g-2">
       <div class="col" *ngFor="let items of recentWorks">
@@ -162,7 +182,7 @@
   </div>
 </section>
 <!-- Modal -->
-<div class="wrap" *ngFor="let items of recentWorks">
+ <div class="wrap" style="overflow: hidden;" *ngFor="let items of recentWorks">
   <div class="modal fade" id="exampleModal{{ items.id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div id="modalfun" [ngClass]="{'modal-dialog-centered':list}" class="modal-dialog">
@@ -178,56 +198,58 @@
     </div>
   </div>
 </div>
-<section id="contact">
-  <h1 class="secTitle text-dark">Contact</h1>
+
+<section class="contact" id="contact"> -->
+  <h1 class="secTitle py-4 pt-5 text-dark">Contact</h1>
   <div class="container">
     <div class="row g-1 bshadow">
       <div class="col-md-4">
-
-        <div class="row g-0">
-
-          <div class="card p-3 text-center">
-            <div class="col-md-12 p-3">
-              <div class="iconbox">
-                <div class="iconwrapper">
-                  <i class="fa-solid fa-phone"></i>
+        <div class="container-fluid">
+          <div class="row g-0">
+            <div class="card p-3 text-center">
+              <div class="col-md-12 p-3">
+                <div class="iconbox">
+                  <div class="iconwrapper">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
                 </div>
+                <p>
+                  <a href="tel:+918072684418">+91 80726 84418</a>
+                  <br />
+                  <a href="tel:+919442744138">+91 94427 44138</a>
+                </p>
               </div>
-              <p>
-                +91 80726 84418
-                <br />
-                +91 94427 44138
-              </p>
-            </div>
 
-            <div class="col-md-12 p-3">
+              <div class="col-md-12 p-3">
 
-              <div class="iconbox">
-                <div class="iconwrapper">
-                  <i class="fa-solid fa-location-dot"></i>
+                <div class="iconbox">
+                  <div class="iconwrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
                 </div>
+                <p>
+                  No. 2/2 Pandi Ayya Kovil Street<br />
+                  Soodamanipuram, Karaikudi-630002,<br /> Sivagangai Dist, Tamilnadu.
+                </p>
+
               </div>
-              <p>
-                No. 2/2 Pandi Ayya Kovil Street<br />
-                soodamani puram, Karaikudi-630002,<br /> Sivagangai Dist, Tamilnadu.
-              </p>
+              <div class="col-md-12 p-3">
 
-            </div>
-            <div class="col-md-12 p-3">
-
-              <div class="iconbox">
-                <div class="iconwrapper">
-                  <i class="fa-solid fa-envelope"></i>
+                <div class="iconbox">
+                  <div class="iconwrapper">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
                 </div>
-              </div>
-              <p>
-                karthiunjanai@gmail.com
-              </p>
+                <p>
+                  <a href="mailto:karthiunjanai@gmail.com">
+                    karthiunjanai@gmail.com
+                  </a>
+                </p>
 
+              </div>
             </div>
           </div>
         </div>
-
       </div>
       <div class="col-md-8">
         <iframe
@@ -237,8 +259,8 @@
     </div>
   </div>
 </section>
-<footer>
 
+<footer>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <path fill="#292d33" fill-opacity="1"
       d="M0,224L48,218.7C96,213,192,203,288,208C384,213,480,235,576,240C672,245,768,235,864,208C960,181,1056,139,1152,122.7C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -246,9 +268,10 @@
   </svg>
   <div class="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4 col-md-4">
-          <img src="../assets/images/logo2.png" alt="">
+      <img src="../assets/images/logo2.png" alt="">  
+      <div class="row g-4">
+        <div class="col col-md-4">
+
           <h2 class="pt-2 pb-3">AL Infrastructures Development</h2>
           <p>
             At A/L infrastructures, our promise is to execute the highest-quality trim carpentry work to commercial and
@@ -257,20 +280,32 @@
             feeling good about a job well done.
           </p>
         </div>
-        <div class="col-sm-4 col-md-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae quam, assumenda nemo corrupti impedit culpa
-          voluptatum.
-        </div>
-        <div class="col-sm-4 col-md-4">
+        <div class="col col-md-4">
+          <h4>
+            Quick Links
+          </h4>
           <ul>
-            <li>Home</li>
-            <li>services</li>
-            <li>recent Works</li>
-            <li>Contact</li>
+            <li class="click" (click)="scrollToTarget('.landingPage')">Home</li>
+            <li class="click" (click)="scrollToTarget('.about')">About</li>
+            <li class="click" (click)="scrollToTarget('.services')">services</li>
+            <li class="click" (click)="scrollToTarget('.recentWorks')">recent Works</li>
+            <li class="click" (click)="scrollToTarget('.contact')">Contact</li>
           </ul>
         </div>
-
-        
+        <div class="col col-md-4">
+          <h4>
+            Address
+          </h4>
+          <p>
+            No. 2/2 Pandi Ayya Kovil Street<br />
+            Soodamanipuram, Karaikudi-630002,<br /> Sivagangai Dist, Tamilnadu.
+          </p>
+          <p>
+            <a href="tel:+918072684418">
+              <button class="butn">Call Us</button>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,38 @@
+#navBar {
+    overflow: hidden;
+}
+#nav {
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.navbar-shrink {
+    background-color: #fff !important;
+
+    .navbar a {
+        color: rgba(0, 0, 0, 0.23);
+    }
+}
+.navbar {
+    
+    overflow: hidden;
+    padding: 0.5rem;
+}
+#navBar .navbar {
+    background-color: transparent;
+}
+.navbar a {
+    cursor: pointer;
+}
+@media (max-width: 500px) {
+    .navbar {
+        background-color: white !important;
+    }
+    .navbar-collapse {
+        background-color: white !important;
+        padding: 15px;
+    }
+}
 .landpage {
     background: url(../assets/images/bg5.jpg);
     background-position: top;
@@ -10,7 +45,7 @@
 .introimg {
     display: flex;
     top: 10%;
-    margin: 80px auto 0;
+    margin: 97px auto 0;
 }
 .imgprop {
     background-size: cover;
@@ -34,7 +69,7 @@
     font-size: 50px;
     letter-spacing: 1px;
     font-weight: 400;
-    padding: 10px 0;
+    padding-top: 20px;
 }
 
 .about {
@@ -43,7 +78,7 @@
     overflow: hidden;
 }
 .about::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: 10%;
@@ -57,7 +92,7 @@
     padding: 3vw 0;
 }
 .services::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 10%;
@@ -118,7 +153,6 @@
     background: url(../assets/images/abrahamLincoln.jpg);
     background-position: top;
     background-size: cover;
-
     min-height: 460px;
     width: 100%;
 }
@@ -168,7 +202,7 @@ span {
     background-color: #292d33;
     padding: 2% 0;
 }
-#recentWorks .card{
+#recentWorks .card {
     border: none;
 }
 #recentWorks img {
@@ -177,30 +211,33 @@ span {
 .cursorp {
     cursor: pointer;
 }
- .ifcon {
-     width: 100%;
-     height: 100%;
-     margin: 1.75rem auto;
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
+.ifcon {
+    width: 100%;
+    height: 100%;
+    margin: 1.75rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ifimg {
     width: 950px;
 }
 @media only screen and (max-width: 500px) {
     .ifimg {
         width: 100%;
-    }   
+    }
 }
 #contact {
     // background-color: #292d33;
     min-height: 650px;
-    padding-top: .5%;
-
+    padding-top: 0.5%;
 }
 #contact .card {
     border: none;
+}
+#contact a {
+    text-decoration: none;
+    color: inherit;
 }
 #contact .iconbox {
     display: flex;
@@ -229,11 +266,67 @@ span {
     // box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-footer {
-    margin-top: -60px;
-}
+
+ //footer styles
+
 .footer {
     background-color: #292d33;
+    color: #D3D3D3;
+    
+    padding-bottom: 2%;
+}
+.footer a {
+    text-decoration: none;
+}
+.footer h4 {
     color: #fff;
 }
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer ul li {
+    padding: 1%;
+}
+.footer ul li:hover {
+    color: #fff;
+}
+.click {
+    cursor: pointer;
+}
+.butn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: white;
+    color: black !important;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: .8em 2em;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
 
+    &:hover,
+    &:focus {
+        color: #fff;
+        outline: 0;
+    }
+    
+    color: #000;
+    background: {
+        image: linear-gradient(45deg, #00008B 50%, transparent 50%);
+        position: 100%;
+        size: 400%;
+    }
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        background-position: 0;
+    }
+}
