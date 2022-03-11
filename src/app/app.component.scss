@@ -34,7 +34,7 @@
     }
 }
 .landpage {
-    background: url(../assets/images/bg5.jpg);
+    background: url(../assets/images/bg5.webp);
     background-position: top;
     width: 100%;
     height: 100vh;
@@ -42,6 +42,10 @@
     background-repeat: no-repeat;
     position: relative;
 }
+.landpage h5 {
+    font-family: "poppins", sans-serif;
+}
+
 .introimg {
     display: flex;
     top: 10%;
@@ -55,6 +59,7 @@
 }
 .mainTitle {
     text-align: center;
+    margin-bottom: .05rem
 }
 .title {
     font-family: "Bebas Neue", cursive;
@@ -69,7 +74,7 @@
     font-size: 50px;
     letter-spacing: 1px;
     font-weight: 400;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .about {
@@ -89,7 +94,7 @@
 
 .services {
     position: relative;
-    padding: 3vw 0;
+    padding: 4vw 0;
 }
 .services::after {
     content: "";
@@ -98,7 +103,7 @@
     right: 10%;
     height: 75px;
     width: 3px;
-    background-color: blue;
+    background-color: #2957dd;
 }
 .box {
     margin: -360px auto 60px;
@@ -134,6 +139,9 @@
     margin: 0;
     font-family: "Open Sans", sans-serif;
 }
+#services i {
+    color: #fff !important;
+}
 #lnpad {
     padding: 4% 3% 8% 0;
     font-family: "Open Sans", sans-serif;
@@ -150,7 +158,7 @@
     font-size: 70px;
 }
 .imgbox {
-    background: url(../assets/images/abrahamLincoln.jpg);
+    background: url(../assets/images/abrahamLincoln.webp);
     background-position: top;
     background-size: cover;
     min-height: 460px;
@@ -170,6 +178,7 @@ span {
     font-family: "Bebas Neue", cursive;
     font-size: 30px;
 }
+
 #services .card {
     padding: 3%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -186,7 +195,7 @@ span {
     padding: 1rem 0;
 }
 #services .iconwrapper {
-    background-color: blue;
+    background-color: #2957dd;
     border-radius: 50%;
     width: 75px;
     aspect-ratio: 1;
@@ -205,9 +214,19 @@ span {
 #recentWorks .card {
     border: none;
 }
-#recentWorks img {
-    border-radius: 12px;
+// #recentWorks img {
+//     border-radius: 12px;
+// }
+.borderround {
+    border-radius: 12px !important;
 }
+#recentWorks .card {
+    border-radius: 0;
+}
+#recentWorks .nobjfit {
+    object-fit: cover !important;
+}
+
 .cursorp {
     cursor: pointer;
 }
@@ -220,7 +239,16 @@ span {
     justify-content: center;
 }
 .ifimg {
-    width: 950px;
+    width: 850px;
+}
+.objfit { 
+    object-fit: contain;
+}
+.bgdark {
+    background-color: #ddd;
+}
+.modal-content {
+    border: none;
 }
 @media only screen and (max-width: 500px) {
     .ifimg {
@@ -245,7 +273,7 @@ span {
     justify-content: center;
 }
 #contact .iconwrapper {
-    background-color: blue;
+    background-color: #2957dd;
     border-radius: 50%;
     width: 45px;
     aspect-ratio: 1;
@@ -256,6 +284,7 @@ span {
 }
 #contact i {
     font-size: 20px;
+    color: #fff;
 }
 #contact p {
     font-size: 15px;
@@ -292,6 +321,12 @@ span {
 .footer ul li:hover {
     color: #fff;
 }
+.footer a {
+    text-decoration: none;
+}
+.footer .f14 {
+    font-size: 15px;
+}
 .click {
     cursor: pointer;
 }
@@ -299,7 +334,7 @@ span {
     box-sizing: border-box;
     appearance: none;
     background-color: white;
-    color: black !important;
+    color: black;
     cursor: pointer;
     display: flex;
     align-self: center;
@@ -314,7 +349,7 @@ span {
 
     &:hover,
     &:focus {
-        color: #fff;
+        color: #fff !important;
         outline: 0;
     }
     
@@ -330,3 +365,39 @@ span {
         background-position: 0;
     }
 }
+
+.back-to-top {
+    position: fixed;
+    display: table;
+    background: #2957dd;
+    color: #2957dd;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: all 0.5s ease;
+    z-index: 11;
+    opacity: 0;
+  }
+  
+  .back-to-top i {
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 15px;
+    }
+  }
+  
+  .show-scrollTop {
+    opacity: 1 !important;
+    transition: all 0.8s ease;
+  }

@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   collection: any;
   list = true;
   ariaExpanded: boolean = false;
+  windowScrolled: boolean = false;
 
   constructor() {
 
@@ -20,15 +21,23 @@ export class AppComponent implements OnInit {
   }
 
   recentWorks = [
-    { src: "../assets/images/recw1.jpeg", id: "1" },
-    { src: "../assets/images/recw2.jpeg", id: "2", t: "2" },
-    { src: "../assets/images/recw3.jpeg", id: "3", t: "3" },
-    { src: "../assets/images/recw4.jpeg", id: "4", t: "2" },
-    { src: "../assets/images/recw5.jpeg", id: "5", t: "2" },
-    { src: "../assets/images/recw6.jpeg", id: "6" },
-    { src: "../assets/images/recw7.jpeg", id: "7", t: "4" },
-    { src: "../assets/images/recw8.jpeg", id: "8", t: "2" },
-    { src: "../assets/images/recw9.jpeg", id: "9" }
+    { src: "../assets/images/recw13.webp", id: "1" },
+    { src: "../assets/images/recw1.jpeg", id: "2" },
+    
+    { src: "../assets/images/recw3.webp", id: "3", t: "3",},
+    { src: "../assets/images/recw4.webp", id: "4", t: "2" },
+    { src: "../assets/images/recw11.webp", id: "5", t: "2" },
+    { src: "../assets/images/recw6.webp", id: "6" },
+    { src: "../assets/images/recw7.webp", id: "7", t: "4" },
+    { src: "../assets/images/recw10.webp", id: "8", t: "2", s:"2" },
+    { src: "../assets/images/recw12.webp", id: "9" },
+    
+    { src: "../assets/images/recw14.webp", id: "10", s:"2" },
+    { src: "../assets/images/recw15.webp", id: "11", s:"2" },
+    { src: "../assets/images/recw16.webp", id: "12", s:"2" },
+    { src: "../assets/images/recw17.webp", id: "13", s:"2" },
+    { src: "../assets/images/recw18.webp", id: "14", s:"2" },
+    { src: "../assets/images/recw20.webp", id: "15", s:"2" }
   ]
   response() {
     if (window.innerWidth <= 500) {
@@ -45,9 +54,11 @@ export class AppComponent implements OnInit {
 
     if (verticalOffset > 80) {
       document.getElementById("nav").classList.add('navbar-shrink');
+      this.windowScrolled = true;
     }
     else {
       document.getElementById("nav").classList.remove('navbar-shrink');
+      this.windowScrolled = false;
     }
   }
   scrollToTarget = (target: string) => {
@@ -58,10 +69,8 @@ export class AppComponent implements OnInit {
 
     this.ariaExpanded = false;
     jump(target, {
-      offset: -10,
+      offset: -15,
       duration: 500,
-      
-      
     });
 
   }
